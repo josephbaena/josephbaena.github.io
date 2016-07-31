@@ -2,9 +2,58 @@
 <html>
 	<head>
 		<title>Joseph Baena</title>
+		<style>
+        * { padding: 0; margin: 0; }
+        body { background-color: #333; margin-top: 100px; margin-left: 50px; margin-bottom: 50px; }
+        h1 { color: rgba(255,255,255,0.9); font-family: "freight-micro-pro", Helvetica; font-size: 54px; }
+        h2 { color: rgba(255,255,255,0.9); font-family: "freight-micro-pro", Helvetica; font-size: 34px; }
+        p { color: #fff; font-family: "freight-micro-pro", Helvetica; font-size: 20px; line-height: 32px; margin-bottom: 22px; -webkit-font-smoothing: antialiased; margin-left: 40px; }
+        ul {
+             color: #fff; font-family: "freight-micro-pro", Helvetica; font-size: 20px; line-height: 32px; margin-bottom: 22px; -webkit-font-smoothing: antialiased; margin-left: 50px;
+        }
+        a { color: #fff; font-weight: 600; text-decoration: none; padding-bottom: -1px !important; border-bottom: 3px solid rgba(255,255,255,0.3); }
+        strong { font-weight: 600; }
+        a:hover { color: #fff; border-bottom: 3px solid rgba(255,255,255,1); }
+        #monogram { width: 50px; padding: 50px 0 0 0; margin: 0 auto 0 50px; }
+        #about { width: 450px; margin: 10px auto 0 50px; background-color: rgba(94,113,140,0.4);!important; }
+        #content { width: 400px; padding-left: 15px; padding-top: 10px; padding-bottom: 10px;}
+        .initials { opacity: 0.8; }
+        small { color: #fff; font-family: "freight-micro-pro", Helvetica; font-size: 14px; -webkit-font-smoothing: antialiased; }
+        @media (max-width: 767px) { 
+            #monogram { position: relative; width: auto; padding: 20px; margin: 0; }
+            #about { position: relative; width: auto; padding: 20px; margin: 0 !important; }
+            .backstretch { opacity: 0.2; }
+        }
+    </style>
 	</head>
 	<body>
-		<h1>Hello world</h1>
-		<h3><a href="test.html">go to test</a></h3>
+		<div id="about">
+		    <div id="content">
+		        <center>
+		            <h1>Joseph Baena</h1></center>
+		            <p></p>
+		            <p>
+		                <a href="http://www.linkedin.com/pub/joseph-baena/a7/a45/39/">LinkedIn</a>
+		                &nbsp&nbsp&middot&nbsp&nbsp
+		                <a href="http://www.github.com/josephbaena">GitHub</a>
+		            </p>
+		        </center>
+		    </div>
+		</div>
+
+		<!--include jquery & backstretch-->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script type="text/javascript" src="jquery.backstretch.min.js"></script>
+
+		<script type="text/javascript">
+		$(function(){
+		     $(window).resize(function(){
+		         if($(this).width() >= 767){
+		             $.backstretch("stars.jpg", {speed: 150});
+		         }
+		      })
+		      .resize();//trigger resize on page load
+		});
+		</script>
 	</body>
 </html>
